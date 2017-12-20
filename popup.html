@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>History Clearer Popup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="popup.js"></script>
+
+    <style>
+      body{width:500px; height:200px;}
+      legend{color: gray; font-size: 16px; font-weight: bold; text-align: center; border:1px solid grey;}
+      fieldset{ border: none; }
+
+    </style>
+  </head>
+
+  <body>
+  <br/>
+  <fieldset>
+    <div class="row">
+      <legend>How often would you like your history to be cleared?</legend>
+      <br/>
+      <div class="input-field col s12">
+        <input id="time" type="text" class="validate">
+        <label for="time">Enter in hours</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="switch col s12">
+        <label>
+          Off
+          <input type="checkbox">
+          <span class="lever"></span>
+          On
+        </label>
+      </div>
+      <br/><br/><br/>
+      <a class="waves-effect waves-light btn col s12">Done</a>
+    </div>
+  </fieldset>
+  </body>
+</html>

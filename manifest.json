@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "History Clearer",
+  "description": "This extension will clear your history however often you set it to.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": {
+      "16": "images/clear16.png",
+      "24": "images/clear24.png",
+      "32": "images/clear32.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["browsing.js"]
+    }
+  ]
+}

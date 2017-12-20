@@ -1,0 +1,19 @@
+git init
+git add .
+git commit -m "message"
+git remote add origin url
+git push -u origin master
+git pull x.git --allow-unrelated-histories
+
+:wq enter
+
+git init
+git add .
+git commit -m "message"
+git remote add origin url
+git checkout -b server
+git pull x.git server
+git push -u origin server
+
+
+
