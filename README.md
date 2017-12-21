@@ -1,4 +1,4 @@
 # ScheduledHistoryClearerChromeExtension
 A scheduled history clearer extension for Google Chrome
 
-![Alt text](images/screenshot1.png?raw=true "Screenshot")
+![Alt text](https://github.com/eochoa5/ScheduledHistoryClearerChromeExtension/blob/master/images/screenshot1.PNG?raw=true "Screenshot")
