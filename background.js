@@ -5,6 +5,26 @@ var myInterval;
 function clearHistory (){
 
     //clear history
+
+    chrome.history.deleteAll(function(){
+
+        // show notification telling the user
+
+        var options = {
+            type:"basic",
+            iconUrl: "images/clear32.png",
+            title: "History Clearer Notification",
+            message: "Your history has been cleared!"
+        };
+
+
+        chrome.notifications.create("HistoryClearedNotification12345",  options, function(id){
+
+        });
+
+
+
+    });
 }
 
 chrome.runtime.onMessage.addListener(
@@ -20,7 +40,7 @@ chrome.runtime.onMessage.addListener(
             chrome.storage.sync.set({'frequency': inputTime}, function() {
 
                 chrome.storage.sync.get("frequency", function(res){
-                    frequency = res.frequency * 1000;
+                    frequency = res.frequency * 3600000;
 
                     sendResponse({msg: " "});
 
