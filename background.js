@@ -5,9 +5,7 @@ var myInterval;
 function clearHistory (){
 
     //clear history
-
 }
-
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
@@ -16,6 +14,7 @@ chrome.runtime.onMessage.addListener(
         var clearerEnabled = request.clearerEnabled;
 
         if(clearerEnabled){
+
             // save chosen frequency in storage
 
             chrome.storage.sync.set({'frequency': inputTime}, function() {
@@ -30,9 +29,8 @@ chrome.runtime.onMessage.addListener(
                     clearInterval(myInterval);
                     myInterval = 0;
                     myInterval = setInterval(function(){ clearHistory() }, frequency);
-                    
-                });
 
+                });
 
             });
 
