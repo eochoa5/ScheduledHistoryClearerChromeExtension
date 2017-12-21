@@ -9,9 +9,9 @@
     <script src="popup.js"></script>
 
     <style>
-      body{width:500px; height:200px;}
+      body{width:500px; }
       legend{color: gray; font-size: 16px; font-weight: bold; text-align: center; border:1px solid grey;}
-      fieldset{ border: none; }
+      fieldset{ border: none;  }
 
     </style>
   </head>
@@ -31,13 +31,13 @@
       <div class="switch col s12">
         <label>
           Off
-          <input type="checkbox">
+          <input type="checkbox" id="mySwitch">
           <span class="lever"></span>
           On
         </label>
       </div>
       <br/><br/><br/>
-      <a class="waves-effect waves-light btn col s12">Done</a>
+      <a  class="waves-effect waves-light btn col s12" id="doneBtn">Done</a>
     </div>
   </fieldset>
   </body>
