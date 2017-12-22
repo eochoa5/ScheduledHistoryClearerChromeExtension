@@ -22,8 +22,6 @@ function clearHistory (){
 
         });
 
-
-
     });
 }
 
@@ -61,9 +59,37 @@ chrome.runtime.onMessage.addListener(
             clearInterval(myInterval);
             myInterval = 0;
 
+            chrome.storage.sync.remove("frequency");
+
         }
 
     });
+
+
+// execute script when chrome is opened
+
+chrome.storage.sync.get("frequency", function(res) {
+
+    if (res.frequency !== undefined) {
+
+        frequency = res.frequency * 3600000;
+
+        //start scheduled clearer
+
+        clearInterval(myInterval);
+        myInterval = 0;
+        myInterval = setInterval(function () {
+            clearHistory()
+        }, frequency);
+
+    }
+
+
+});
+
+
+
+
 
 
 
